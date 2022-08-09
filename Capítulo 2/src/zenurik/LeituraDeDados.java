@@ -9,10 +9,15 @@ public class LeituraDeDados {                   //Arquivo / classe
         Scanner entrada = new Scanner(System.in);
 
         //2. Utiliza esse objeto com um método específico para ler
-        System.out.println("Digite sua idade e altura");
-        int idade = entrada.nextInt();          //Lê um valor inteiro
+        System.out.println("Digite seu nome completo, idade, altura e uma cor");
+
+        String nome  = entrada.nextLine();      //Lê texto (incluindo espaços)
+        int idade    = entrada.nextInt();       //Lê um valor inteiro
         float altura = entrada.nextFloat();     //Lê um real
-        System.out.println("Idade: "+idade+" Altura: "+altura);
+        String cor   = entrada.next();          //Lê texto (uma palavra)
+
+        System.out.println(nome+", "+idade+". "+altura+"m");
+        System.out.println(cor);
 
         //3. Fecha a instância da classe
         //entrada.close()  ----  Eu fechei lá em baixo
@@ -43,6 +48,28 @@ public class LeituraDeDados {                   //Arquivo / classe
         }else{
             System.out.println("IMC de "+imc+" NÃO está na faixa ideal");
         }
+     
+
+
+    /*[Exercício] Pergute a idade e exiba a categoria da pessoa
+      (Menor ou maior de idade, idoso, centenário)  */
+        System.out.print("Fala a idade de novo, eu esqueci: ");        
+        idade = entrada.nextInt();
+
+
+        if(idade<18){
+            System.out.println("Menor de idade");
+
+        } else if(idade>=18 && idade<70){
+            System.out.println("Maior de idade");
+
+            if(idade<30) {System.out.println(" e Jovem adulto"); }
+        } else {
+            System.out.println("Idoso");
+
+            if(idade>=100) {System.out.println(" e Centenário"); }
+        }
+
 
         entrada.close(); 
     }
