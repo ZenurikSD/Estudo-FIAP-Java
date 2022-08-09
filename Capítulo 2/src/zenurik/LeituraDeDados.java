@@ -1,7 +1,6 @@
 package zenurik;                                //Pasta
 
 import java.util.Scanner;                       //Importar a classe do pacote java.util
-                          //Classe de funções matemáticas
 
 public class LeituraDeDados {                   //Arquivo / classe
     public static void main(String[] args){     //Método principal
@@ -17,7 +16,6 @@ public class LeituraDeDados {                   //Arquivo / classe
 
         //3. Fecha a instância da classe
         //entrada.close()  ----  Eu fechei lá em baixo
-
 
     //[Exercício] Leia 2 números e some-os. Mostre se a soma é par ou ímpar.
         System.out.println("Digite 2 números para somar:");

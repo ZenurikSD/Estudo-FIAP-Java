@@ -12,7 +12,7 @@ public class Operadores {  						//Arquivo Operadores.java
 		float divisao = x/y;
 		float resto = x%y;
 
-		float exprs = z + (x*y);
+		float exprs = z + x - y / (x*y);
 
 		//printf() em linhas separadas
 		// Printf("string %formato", var/argumentos)
@@ -27,7 +27,17 @@ public class Operadores {  						//Arquivo Operadores.java
 		z = 8;
 		z = z + 10; //Adicionar 10 à variável
 		z+= 10; 	//Mesma coisa
-		z++; z--; 	//Incrementa 1, decrementa 1
+
+		//Incrementos e decrementos ANTES e DEPOIS
+		z=10; x=2; y=2;
+		//------ DEPOIS: z recebe 2 (atribui DEPOIS incrementa x)
+		z = x++;	
+		System.out.println("z = "+z);
+		System.out.println("x = "+x);
+		//------ ANTES: z recebe 1 (decrementa y ANTES de atribuir)
+		z = --y;
+		System.out.println("z = "+z);
+		System.out.println("y = "+y);
 
 		//Concatenar string + variável no println()
 		System.out.println("Valor Z: " + z);

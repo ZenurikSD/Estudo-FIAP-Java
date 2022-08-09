@@ -10,7 +10,7 @@ public class Conversoes {                    //Arquivo Conversoes.java
 
       System.out.printf("Print formatado \nSe eu soubesse colocar as variáveis aqui eu colocaria\n");
 
-      //"Cast to": Conversão mais envolvida.
+      //"Cast to": Conversão explícita.
       // De real grande para inteiro
       double valorReal = 42.0254216945;
       int valorInt = (int) valorReal;
