@@ -9,11 +9,17 @@ public class Cliente1 {
         int resp = 0;
 
     //1. Objetos instanciados a partir da classe
-        Conta cc = new Conta(){ };  //Instância vazia
-        Conta poupanca = new Conta(200,002,355); 
+        //Instância vazia
+        Conta cc = new Conta(){ };  
+        cc.saldo = 2350;
+        cc.numero = 265;
+        cc.agencia = 001;
+        
         //Instância com parâmetros definidos
+        Conta poupanca = new Conta(200,002,355); 
+        
 
-    //2. Interação com os métodos
+    //2. Interação com os métodos do objeto
     // Menu bem limitado pois não sei limpar a saída ainda
         while(resp != 3){
             System.out.println("\nConta poupança: ");
@@ -42,8 +48,7 @@ public class Cliente1 {
             } else if(resp == 3){
                 break;
             } else {
-                System.out.println("Opção inválida");
-            }
+                System.out.println("Opção inválida");  }
         }
 
         entrada.close();
