@@ -13,12 +13,16 @@ package org.zenurik;
  */
 
 public class Conta {
+    // ----[ Atributos ]--------------------------
     /** Saldo da conta */
     double saldo;
     /** Agência e número da conta */
     int agencia, numero;
+    /** Instância da subclasse Cliente */
+    Cliente cliente = new Cliente();
 
-    // ----[ Construtores ]-------------------
+
+    // ----[ Construtores ]------------------------
     public Conta(){  }              //Instância vazia
     
     public Conta(double nvSaldo, int nvAgencia, int nvNumero){
@@ -27,7 +31,7 @@ public class Conta {
         this.numero  = nvNumero;    //Instância com os 3 parâmetros
     }
 
-    // ----[ Métodos ]-------------------
+    // ----[ Métodos ]------------------------------
     /** Exibe o saldo atual da conta
      * @return Valor do saldo
      */

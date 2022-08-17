@@ -1,6 +1,6 @@
 package org.zenurik;
 
-public class Cliente2 {
+public class Teste2 {
     public static void main(String[] args) {  //Execução principal
 
         //Instância vazia da classe ContaEncap

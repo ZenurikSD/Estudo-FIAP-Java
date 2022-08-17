@@ -2,7 +2,7 @@ package org.zenurik;
 
 import java.util.Scanner;
 
-public class Cliente1 {
+public class Teste1 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         float valor = 0;
