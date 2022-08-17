@@ -3,6 +3,8 @@
 
 package org.zenurik;
 
+import java.io.Serializable;
+
 
 // DOCUMENTAÇÃO --------------------------
 /** Classe encapsulada (Javabean) que abstrai uma Conta bancária
@@ -10,27 +12,28 @@ package org.zenurik;
  * @version 1.0
  */
 
-public class ContaEncap {
-// ----[ Atributos ]---------------------
+public class ContaEncap implements Serializable{
+    private static final long serialVersionUID = 1L;
+
+// ----[ Atributos ]-----------------------------
     /** Saldo da conta */
     private double saldo;
     /** Agência e número da conta */
     private int agencia, numero;
 
 
-// ----[ Construtores ]-------------------
+// ----[ Construtores ]---------------------------
     public ContaEncap(){  }              //Instância vazia
     
-    public ContaEncap(int agencia, int numero /*, double saldo*/){
+    public ContaEncap(int agencia, int numero){
         this.setAgencia(agencia);
-        this.setNumero(numero);
-        //this.setSaldo(saldo);           
-        /* O setSaldo() não existe pois ele não é definido como os outros:
-         * só pode ser modificado ao depositar() ou retirar().
-         */
+        this.setNumero(numero);         
+        /* this.setSaldo() não é necessário, 
+        o depositar e retirar fazem esse trabalho.*/
     }
 
-// ----[ Métodos de modificação ]--------------
+
+// ----[ Métodos de modificação (Setters) ]-----------------
     /** Define uma nova agência e a salva no atributo privado
      * @param nvAgencia  */
     public void setAgencia(int nvAgencia){      
@@ -44,7 +47,7 @@ public class ContaEncap {
     }
 
 
-// ----[ Métodos de acesso ]--------------
+// ----[ Métodos de acesso (Getters) ]---------------------
     /** Retorna o número atual da agência
      * @return  agência*/
     public int getAgencia(){
@@ -64,7 +67,7 @@ public class ContaEncap {
     }
 
 
-// ----[ Métodos ]-------------------
+// ----[ Métodos ]------------------------------
     /** Faz um saque 
      * @param valor O valor a ser subtraído do saldo
      */
@@ -76,5 +79,4 @@ public class ContaEncap {
      */
     public void depositar(float deposito){
         this.saldo += deposito;            }
-
 }

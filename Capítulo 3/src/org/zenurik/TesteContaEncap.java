@@ -1,18 +1,23 @@
 package org.zenurik;
 
-public class Teste2 {
+/** Teste da classe Conta encapsulada
+ * @author Zenurik
+ * @version 1.0
+ */
+
+public class TesteContaEncap {
     public static void main(String[] args) {  //Execução principal
 
         //Instância vazia da classe ContaEncap
-        ContaEncap corrente = new ContaEncap();
-        corrente.setAgencia(001);
-        corrente.setNumero(3211);
-        corrente.depositar(1450);
+        ContaEncap cc = new ContaEncap();
+        cc.setAgencia(001);
+        cc.setNumero(3211);
+        cc.depositar(1450);
 
         System.out.println("\n===[Conta corrente]=============");
-        System.out.println("Agência:         "+corrente.getAgencia());
-        System.out.println("Número da conta: "+corrente.getNumero());
-        System.out.println("Saldo atual:     R$ "+corrente.getSaldo());
+        System.out.println("Agência:         "+cc.getAgencia());
+        System.out.println("Número da conta: "+cc.getNumero());
+        System.out.println("Saldo atual:     R$ "+cc.getSaldo());
 
 
         //Instância com parâmetros de entrada
