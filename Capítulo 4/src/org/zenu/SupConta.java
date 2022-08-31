@@ -17,6 +17,18 @@ public class SupConta implements Serializable {
     private int numero;
     private double saldo;
 
+    //Construtores
+    public SupConta(){ }
+
+    /** Instância da classe SupConta com parâmetros
+     * @param nvAgc Nova agência (Faça cast para byte)
+     * @param nvNum Novo número da conta
+     */
+    public SupConta(byte nvAgc, int nvNum){
+        this.agencia = nvAgc;
+        this.numero  = nvNum;
+    }
+
 
     //Métodos de acesso
     public byte getAgencia(){
