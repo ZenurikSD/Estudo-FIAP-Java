@@ -29,12 +29,11 @@ public class SubCCorrente extends SupConta {
     
     //Métodos específicos
     /**Saldo da conta corrente: 
-     * Sobrescreve e se apoia no método da superclasse para retornar o saldo da conta + cheque especial.
+     * Se apoia no método da superclasse para retornar o saldo da conta + cheque especial.
      * @return saldo + cheque especial
      */
-    @Override
-    public double getSaldo(){
-        return getSaldo() + this.cheque_esp;
+    public double getSaldoDisponivel(){
+        return super.getSaldo() + cheque_esp;
     }
 
     /** Saque da conta corrente.
