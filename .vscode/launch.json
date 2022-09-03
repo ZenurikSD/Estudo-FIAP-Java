@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Testes",
+            "request": "launch",
+            "mainClass": "org.zenu.Testes",
+            "projectName": "Fundamentos Java FIAP_13b28c8c"
+        },
+        {
+            "type": "java",
             "name": "Launch TesteConta",
             "request": "launch",
             "mainClass": "org.zenurik.TesteConta",

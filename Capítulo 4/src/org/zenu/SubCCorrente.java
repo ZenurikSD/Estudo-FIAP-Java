@@ -13,29 +13,31 @@ public class SubCCorrente extends SupConta {
     private double cheque_esp;
 
 
-    //Construtores
+    //Construtores 
     public SubCCorrente(){ }
 
-    /** Instância da subclasse SubCCorrente com parâmetros
-     * @param nvTipo Tipo de conta (básica, especial ou premium)
-     * @param valCheq Valor do limite de cheque especial
+    /** Instância da subclasse SubCCorrente com parâmetros. Faz uma chamada da superclasse para construir também a conta associada
+     * @param nvAgc (Sup) Agência da conta
+     * @param nvNum (Sup) Número da conta
+     * @param nvTipo (Sub) Tipo de conta corrente (básica, especial ou premium)
      */
-    public SubCCorrente(String nvTipo, double valCheq){
+    public SubCCorrente(byte nvAgc, int nvNum, String nvTipo){
+        super((byte) nvAgc, nvNum);
         this.tipo = nvTipo;
-        this.cheque_esp = valCheq;
     }
 
     
     //Métodos específicos
-    /**Saldo da conta corrente
-     * Se apoia no método da superclasse para retornar o saldo da conta + cheque especial.
-     * @return saldo da conta corrente
+    /**Saldo da conta corrente: 
+     * Sobrescreve e se apoia no método da superclasse para retornar o saldo da conta + cheque especial.
+     * @return saldo + cheque especial
      */
-    public double getSaldoCC(){
+    @Override
+    public double getSaldo(){
         return getSaldo() + this.cheque_esp;
     }
 
-    /** Saque com cheque especial.
+    /** Saque da conta corrente.
      * Sobrescreve o método da superclasse para adicionar uma taxa ao saque, e então o utiliza para fazer a retirada.
      */
     @Override
