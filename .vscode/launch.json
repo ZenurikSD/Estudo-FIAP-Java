@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Vetores",
+            "request": "launch",
+            "mainClass": "org.zenu.Vetores",
+            "projectName": "Fundamentos Java FIAP_13b28c8c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Repetidores",
+            "request": "launch",
+            "mainClass": "org.zenu.Repetidores",
+            "projectName": "Fundamentos Java FIAP_13b28c8c"
+        },
+        {
+            "type": "java",
             "name": "Launch TestesContas",
             "request": "launch",
             "mainClass": "org.zenu.TestesContas",
