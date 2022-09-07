@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Vetores2",
+            "request": "launch",
+            "mainClass": "org.zenu.Vetores2",
+            "projectName": "Fundamentos Java FIAP_13b28c8c"
+        },
+        {
+            "type": "java",
             "name": "Launch Vetores",
             "request": "launch",
             "mainClass": "org.zenu.Vetores",
