@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Exercicio",
+            "request": "launch",
+            "mainClass": "org.zenu.Exercicio",
+            "projectName": "Fundamentos Java FIAP_13b28c8c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Matrizes",
+            "request": "launch",
+            "mainClass": "org.zenu.Matrizes",
+            "projectName": "Fundamentos Java FIAP_13b28c8c"
+        },
+        {
+            "type": "java",
             "name": "Launch Vetores2",
             "request": "launch",
             "mainClass": "org.zenu.Vetores2",
