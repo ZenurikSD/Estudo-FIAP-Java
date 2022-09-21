@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Autenticacao",
+            "request": "launch",
+            "mainClass": "org.zenu.Autenticacao",
+            "projectName": "Fundamentos Java FIAP_13b28c8c"
+        },
+        {
+            "type": "java",
             "name": "Launch Strings",
             "request": "launch",
             "mainClass": "org.zenu.Strings",

@@ -34,7 +34,7 @@ public class Repetidores {
 
         } while(resp.equals("S"));
 
-        //Fecha a porta
+        //Fecha a porta quando sair!
         entrada.close();
 
         //for
