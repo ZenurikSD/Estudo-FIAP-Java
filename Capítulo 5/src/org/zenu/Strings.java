@@ -2,7 +2,7 @@ package org.zenu;
 
 import java.util.Scanner;
 
-public class Strings {
+public class Strings{
     public static void main(String[] args) {
         //Formas de inicializar
         String txt1 = new String();
@@ -65,14 +65,40 @@ public class Strings {
         } else{
             System.out.println("Não temos "+cor+" na lista");
         }
-
         input.close();
 
+        
         //4. Cortar e juntar strings
         String frase = new String("Não quero continuar");
+        System.out.println("\n"+frase);
         String nvfrase = frase.substring(frase.indexOf("q")); //Inicia em 'q'
 
-        System.out.println("\nVocê disse \""+nvfrase+"\"? Então bora.");
+        System.out.println("Você disse \""+nvfrase+"\"? Então bora.");
 
+
+        /*5. Teste de imutabilidade
+         * Strings não podem ser alteradas, apenas substituídas. */
+        status = "Zenurik está com preguiça de estudar.";
+        status.toUpperCase();
+        System.out.println("\n"+status);     //Qual versão vai ser impressa?
+
+
+        //6. Replace
+        status = status.replace(
+            "está com preguiça", 
+            "tem muita vontade");
+
+        System.out.println("-> Você quis dizer \""+status+"\"?"+"\n");
+
+
+        /*7. Split
+         * Separa a string de acordo com um delimitador (ou regex)
+         * O resultado é armazenado em um vetor */
+        String palavras[] = status.split(" ");
+        for(String p : palavras){
+            System.out.print(p+"👏");
+        }
+        System.out.println();
+    
     }
 }
