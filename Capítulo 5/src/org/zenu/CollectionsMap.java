@@ -10,9 +10,9 @@ public class CollectionsMap {
         HashMap mapa = new HashMap<>();
 
         //Inserção de pares
-        mapa.put("123", "HTML");
-        mapa.put("111", "Javascript");
-        mapa.put("222", "CSS");
+        mapa.put(123, "HTML");
+        mapa.put(111, "Javascript");
+        mapa.put(222, "CSS");
 
         //Exibição separada
         System.out.println("Chaves: "+mapa.keySet());
@@ -23,7 +23,7 @@ public class CollectionsMap {
         Scanner input = new Scanner(System.in);
         
         System.out.print("\nInsira a chave: ");
-        String chave = input.next();
+        int chave = input.nextInt();
 
         //Verifique se a chave existe
         if(mapa.containsKey(chave) == true){

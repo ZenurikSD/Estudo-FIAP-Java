@@ -4,9 +4,9 @@ package org.zenu;
 public class Vetores2 {
     public static void main(String[] args) {
         
-        Aluno[] grupo = new Aluno[4];           //Vetor de objetos
+        Aluno[] grupo = new Aluno[4];           //Vetor de objetos da classe Aluno
 
-        Aluno estudante = new Aluno();          //Instanciar a classe individualmente
+        Aluno estudante = new Aluno();          //Instância individual da classe
         estudante.setNome("Zenurik");
         grupo[0] = estudante;                   //Posição 0 recebe o objeto 
 

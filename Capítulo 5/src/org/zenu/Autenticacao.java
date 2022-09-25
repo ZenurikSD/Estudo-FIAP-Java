@@ -26,7 +26,6 @@ public class Autenticacao {
          *    uns caracteres de validação.
          *    tamanho: 4 chars (3 letras e o nº 0 no final)
          */
-
         if(user.equals("ZenurikSD")){
 
             boolean tamanho = pass.length() == 4;           //Tamanho = 4?

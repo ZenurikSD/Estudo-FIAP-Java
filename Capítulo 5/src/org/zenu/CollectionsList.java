@@ -32,6 +32,5 @@ public class CollectionsList {
             System.out.println("\nNão tem uva passa?!");
         }
 
-
     }
 }
