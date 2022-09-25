@@ -14,20 +14,24 @@ public class CollectionsList {
         */
         ArrayList lista = new ArrayList();
         lista.add("Panetone");
+        lista.add("de");
         lista.add("Uva passa");
 
-        lista.set(1,"Frutas");  //fome mano
+        lista.set(2,"Frutas");   //Substitui a posição 2
 
+        //Exibe a lista
         for (int l=0; l<lista.size(); l++) {
             System.out.println(lista.get(l));
         }
 
+        //Busca um item
         int indice = lista.indexOf("Uva passa");
-
         if(indice != -1){
-            System.out.println("\nO panetone tem uva passa"+indice);         
+            System.out.println("\nO panetone tem uva passa");         
         } else{
             System.out.println("\nNão tem uva passa?!");
         }
+
+
     }
 }

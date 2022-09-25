@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch CollectionsMap",
+            "request": "launch",
+            "mainClass": "org.zenu.CollectionsMap",
+            "projectName": "Fundamentos Java FIAP_13b28c8c"
+        },
+        {
+            "type": "java",
+            "name": "Launch CollectionsSet",
+            "request": "launch",
+            "mainClass": "org.zenu.CollectionsSet",
+            "projectName": "Fundamentos Java FIAP_13b28c8c"
+        },
+        {
+            "type": "java",
             "name": "Launch CollectionsList",
             "request": "launch",
             "mainClass": "org.zenu.CollectionsList",
