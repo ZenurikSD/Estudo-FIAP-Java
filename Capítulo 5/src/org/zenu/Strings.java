@@ -1,11 +1,13 @@
 package org.zenu;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Strings{
     public static void main(String[] args) {
         //Formas de inicializar
-        String txt1 = new String();
+        String txt1;
+        txt1 = new String();
         txt1 = "declara (var), instancia (classe) e depois atribui (isso aqui)";
 
         String txt2 = new String("Instância c/ valor atribuído");
@@ -14,7 +16,10 @@ public class Strings{
 
 
         //Manipular ===========================================
-        System.out.println("\nTexto3: "+txt3+"\t Chars de escape: \\ \" \'");
+        System.out.println(
+            "\nTexto3: " + txt3 +
+            "\tChars de escape: \\ \" \'"
+        );
         System.out.println("Tamanho: "+txt3.length()+"\n");
 
         //1. Concatenação

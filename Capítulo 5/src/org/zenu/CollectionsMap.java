@@ -26,14 +26,13 @@ public class CollectionsMap {
         int chave = input.nextInt();
 
         //Verifique se a chave existe
-        if(mapa.containsKey(chave) == true){
+        if(mapa.containsKey(chave)){
             System.out.println("Valor: "+mapa.get(chave));
         } else {
             System.out.println("Chave inválida");
         }
 
         input.close();
-        
-
+    
     }
 }

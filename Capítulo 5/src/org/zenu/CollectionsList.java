@@ -24,12 +24,15 @@ public class CollectionsList {
             System.out.println(lista.get(l));
         }
 
-        //Busca um item
-        int indice = lista.indexOf("Uva passa");
-        if(indice != -1){
+        /*Busca um item usando o método contains()
+         * Antes eu tinha usado um teste com indexOf() negativo,
+         * mas isso é bem mais simples.
+         */
+        if(lista.contains("Uva passa")){
             System.out.println("\nO panetone tem uva passa");         
         } else{
-            System.out.println("\nNão tem uva passa?!");
+            System.out.println("\nNão tem uva passa?! É o que então?");
+            System.out.println(lista.get(lista.indexOf("Frutas")));
         }
 
     }

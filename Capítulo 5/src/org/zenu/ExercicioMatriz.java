@@ -3,7 +3,7 @@ package org.zenu;
 import java.util.Scanner;
 
 /** Disciplina e Aluno */
-public class Exercicio {
+public class ExercicioMatriz {
     public static void main(String[] args) {
         //Instanciamentos
         String grade2[][] = new String[2][2];

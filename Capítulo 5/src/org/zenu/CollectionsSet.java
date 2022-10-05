@@ -16,14 +16,16 @@ public class CollectionsSet {
 
         conjunto.add("Java");   //Repetido!
 
-        System.out.println("\n"+conjunto+"\n");
+        System.out.println(
+            "\n"+conjunto.size()+" elementos: "+conjunto+"\n"
+        );
 
         //Buscar um elemento
         // Como se trata de uma tabela hash, ele não usa 'indexOf()' para busca.
-        if(conjunto.contains("Java") == true){
+        if(conjunto.contains("Java")){
             System.out.println("Achei Java!");
         } else {
-            System.out.println("Sem Java");
+            System.out.println("Sem Java 😞");
         }
     }
 }

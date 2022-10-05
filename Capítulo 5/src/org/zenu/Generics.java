@@ -13,16 +13,18 @@ public class Generics {
         Aluno aluno = new Aluno();
         ArrayList tudo = new ArrayList();
 
-        //Lista aceita qualquer tipo
+        //Lista aceita qualquer tipo primitivo ou de referência
         tudo.add("String");
         tudo.add(147334);
         tudo.add(aluno);
 
         //Mas como se recupera os valores na sua forma original?
            // String txt = tudo.get(0);  
-        //^ Erro pois a posição 0 tem um objeto, ñ string. 
+        //^ Erro pois a posição 0 tem um objeto, não uma string. 
         //É preciso realizar cast:
         String txt = (String) tudo.get(0);
+        //Definindo o tipo aceito logo de cara, isso não é necessário.
+        
         
         //Generics ============================================
         //1. ArrayList de diferentes tipos  -------------------
@@ -50,7 +52,7 @@ public class Generics {
         //2. Set e Maps --------------------------------------
         HashSet<String> conjunto = new HashSet<String>();
 
-        //Map usa dois type-parameters (chave e valor)
+        //Map usa dois "type parameters" (chave e valor)
         HashMap<Integer,Aluno> map_alunos = new HashMap<Integer, Aluno>();
         map_alunos.put(1826277, a1);
         map_alunos.put(1940033, a2);
@@ -62,7 +64,7 @@ public class Generics {
 
         //Se a chave (RA) existir, usa para salvar o objeto numa
         // variável e acessar o nome do aluno associado.
-        if(map_alunos.containsKey(RA) == true){
+        if(map_alunos.containsKey(RA)){
             Aluno tmp = map_alunos.get(RA);
             System.out.println("Aluno com esse RA: "+tmp.getNome());
         }
