@@ -16,7 +16,6 @@ public class Vetores2 {
             grupo[i] = estudante;
         }
         
-
         //For-each
         // Leia-se: For (cada X em Y)
         for(Aluno a : grupo){

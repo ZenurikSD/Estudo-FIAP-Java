@@ -25,7 +25,7 @@ public class CollectionsSet {
         if(conjunto.contains("Java")){
             System.out.println("Achei Java!");
         } else {
-            System.out.println("Sem Java 😞");
+            System.out.println("No Java? 😞");
         }
     }
 }

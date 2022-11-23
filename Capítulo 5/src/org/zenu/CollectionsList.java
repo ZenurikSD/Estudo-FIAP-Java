@@ -32,7 +32,7 @@ public class CollectionsList {
             System.out.println("\nO panetone tem uva passa");         
         } else{
             System.out.println("\nNão tem uva passa?! É o que então?");
-            System.out.println(lista.get(lista.indexOf("Frutas")));
+            System.out.println(lista.get(2));
         }
 
     }
