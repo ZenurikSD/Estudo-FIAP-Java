@@ -9,9 +9,8 @@ public class Excecoes2 {
         //Teste para 'throws Exception'
         try {
             System.out.println(calc.dividir(5, 0));
-        } catch (Exception e) {
-            System.err.println("Erro ao dividir: ");
-            e.getStackTrace();
+        } catch (ArithmeticException ae) {
+            System.err.println("Impossível dividir por zero!");
         }
     }
 }

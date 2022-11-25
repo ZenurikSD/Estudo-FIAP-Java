@@ -5,8 +5,13 @@ public class Calcular {
     private float resp;
 
     //Exceção checked: Você deve tratar
-    public int dividir(int x, int y) throws Exception{
+    public float dividir(int x, int y){
+
+        //Exceção unchecked
+        if(y==0){
+            throw new ArithmeticException(); }
+            
         resp = x/y;
-        return 0;
+        return resp;
     }
 }
