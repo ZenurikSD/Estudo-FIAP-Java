@@ -1,10 +1,6 @@
 package org.zenu;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 
 /** Manipulação de arquivos com File/Print e Buffered */
 public class Arquivos {
@@ -26,7 +22,7 @@ public class Arquivos {
         }
 
         // Leitura ---------------------------------------------------
-        try {
+        try {        
             FileReader r_stream = new FileReader("arquivo.txt");
             BufferedReader reader = new BufferedReader(r_stream);
 
@@ -42,12 +38,9 @@ public class Arquivos {
             r_stream.close();
             reader.close();
 
-
         } catch (IOException ioe) {
             System.err.println("\n==[Erro na operação de leitura]==");
             ioe.printStackTrace();
         }
-
-
     }
 }

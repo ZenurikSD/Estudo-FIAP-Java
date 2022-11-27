@@ -4,12 +4,12 @@ package org.zenu;
 public class Calcular {
     private float resp;
 
-    //Exceção checked: Você deve tratar
-    public float dividir(int x, int y){
+    /** Exceção checked: Você deve tratar **/
+    public float dividir(int x, int y) throws IndeterminadoException{
 
         //Exceção unchecked
         if(y==0){
-            throw new ArithmeticException(); }
+            throw new IndeterminadoException(); }
             
         resp = x/y;
         return resp;
