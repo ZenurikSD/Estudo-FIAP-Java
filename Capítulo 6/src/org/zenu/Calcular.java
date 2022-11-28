@@ -1,5 +1,7 @@
 package org.zenu;
 
+import org.zenu.excecoes.IndeterminadoException;
+
 /** Classe teste para exceções */
 public class Calcular {
     private float resp;

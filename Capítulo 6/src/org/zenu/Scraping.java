@@ -6,14 +6,14 @@ public class Scraping {
     public static void main(String[] args) {
         /* Pensei numa ideia "legal": Vou roubar dados do meu próprio sistema
          * copiando uma chave privada SSH e enviando-a para um arquivo separado.
-         * Assumindo que sei o nome de usuário e que o arquivo da chave tem 
-         * exatamente esse nome.
+         * Assumindo que o arquivo da chave tem exatamente esse nome.
          * 
-         * Não deve ser difícil achar um comando pra descobrir o usuário e
-         * simplesmente copiar tudo da pasta.
+         * Não deve ser difícil achar um comando pra descobrir o usuário 
+         * (achei lol) e simplesmente copiar tudo da pasta.
          */
 
-        File caminho = new File("/home/zenurik/.ssh/id_ed25519");
+        String user = System.getProperty("user.home");
+        File caminho = new File(user, ".ssh/id_ed25519");
 
         if(caminho.exists() && caminho.canRead()){
             System.out.println("\nChave privada encontrada. Iniciando cópia...");
@@ -23,7 +23,7 @@ public class Scraping {
                 BufferedReader reader = new BufferedReader(r_stream);
 
                 FileWriter w_stream = new FileWriter(
-                    "/home/zenurik/Documentos/chaveSSH.txt"
+                    user+"/Documentos/chaveSSH.txt"
                 );
                 PrintWriter writer = new PrintWriter(w_stream);
 

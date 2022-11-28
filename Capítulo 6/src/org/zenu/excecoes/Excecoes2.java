@@ -1,6 +1,8 @@
-package org.zenu;
+package org.zenu.excecoes;
 
 import java.util.Scanner;
+
+import org.zenu.Calcular;
 
 public class Excecoes2 {
     public static void main(String[] args) {

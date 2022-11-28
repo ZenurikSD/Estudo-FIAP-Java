@@ -1,4 +1,4 @@
-package org.zenu;           //Pasta, pacote
+package org.zenu.excecoes;           //Pasta, pacote
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
