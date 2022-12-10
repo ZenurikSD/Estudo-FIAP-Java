@@ -6,12 +6,14 @@ import java.io.*;
 public class Leitura implements SistemaDeArquivosInterface {
 
     //Atributos encapsulados
+    private File caminho;
     private FileReader r_stream;
     private BufferedReader reader;
     private String linha;
 
     // Métodos implementados
-    public boolean abrirArquivo(File caminho) throws FileNotFoundException{
+    public boolean abrirArquivo(String path) throws FileNotFoundException{
+        caminho = new File(path);
 
         if(caminho.exists() && caminho.canRead()){
             return true;
@@ -23,19 +25,23 @@ public class Leitura implements SistemaDeArquivosInterface {
      * Chama o método para abrir o arquivo, executa, e chama o método
      * de fechamento.
     */
-    public void lerArquivo(File caminho) throws IOException{
-        abrirArquivo(caminho);
+    public void lerArquivo(String path) throws IOException{
+        
+        // Prossegue caso o retorno seja true
+        if(abrirArquivo(path)){
+            r_stream = new FileReader(path);
+            reader = new BufferedReader(r_stream);
 
-        r_stream = new FileReader(caminho);
-        reader = new BufferedReader(r_stream);
-
-        linha = reader.readLine();
-        while(linha != null){
-            System.out.println(linha);
             linha = reader.readLine();
-        }
+            while(linha != null){
+                System.out.println(linha);
+                linha = reader.readLine();
+            }
+            fecharArquivo();
 
-        fecharArquivo();
+        } else {
+            throw new IOException(); 
+        }
     }
 
     public void fecharArquivo() throws IOException{

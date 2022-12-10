@@ -8,11 +8,7 @@ public class LerArquivos {
     public static void main(String[] args) {
         SistemaDeArquivosInterface ler = new Leitura();
         String user = SistemaDeArquivosInterface.USER_HOME;
-
-        File caminho = new File(
-            user+"/Documentos", 
-            "post it backup.txt"
-        );
+        String caminho = user+"/Documentos/post it backup.txt";
 
         try{
             System.out.println("\n===[Abrindo arquivo...]===\n");

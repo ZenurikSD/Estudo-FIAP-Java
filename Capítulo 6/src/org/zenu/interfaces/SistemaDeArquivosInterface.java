@@ -13,14 +13,14 @@ public interface SistemaDeArquivosInterface{
 
     //Métodos ---------------------------------------------
     /** @param caminho O caminho completo até o arquivo*/
-    boolean abrirArquivo(File caminho) throws IOException;
+    boolean abrirArquivo(String caminho) throws IOException;
 
     /** Recebe um caminho para abrir fluxo de leitura, enviá-lo ao
      * buffer e percorrer as linhas.
      * 
      * @param caminho O caminho completo até o arquivo
      */
-    void lerArquivo(File caminho) throws IOException;
+    void lerArquivo(String caminho) throws IOException;
 
     /** Faça o necessário para fechar os fluxos de forma segura*/
     void fecharArquivo() throws IOException;
