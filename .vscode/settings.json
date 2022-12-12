@@ -2,5 +2,12 @@
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
         "Capítulo 7/lib/mssql-jdbc-11.2.1.jre17.jar"
-    ]
+    ],
+    "java.configuration.runtimes": [
+		{
+		 "name": "JavaSE-17", //Nesse formato, escolha o mesmo número
+		 "path": "/usr/lib64/openjdk-17", //Caminho no Solus
+		 "default": true
+		 },
+	]
 }

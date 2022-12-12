@@ -18,7 +18,7 @@ public class JDBC {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             Connection connectMSSQL = DriverManager.getConnection(connectURL);
 
-            System.out.println("Servidor conectado. DB: Regiões do Brasil");
+            System.out.println("Servidor conectado");
 
             //Tem que ser tudo dentro do Try?
             //Declarações estáticas
