@@ -1,17 +1,35 @@
-package org.zenu.db;
+package org.zenu.db.singleton;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/** Conexão ao servidor do db MSSQL */
+/** Implementa e instancia uma conexão <b>única e global</b> ao servidor do db MSSQL. 
+ * Formato de singleton.
+*/
 public class MSSQLConnect {
+
+    //Atributo estático para guardar a única instância
+    private static MSSQLConnect instance;
+
+    //Construtor privado
+    private MSSQLConnect(){}
+
+    /** Método criador da instância de conexão 
+     * @return Instância única e global dessa classe
+    */
+    public static MSSQLConnect getInstancia(){
+        if(instance==null){
+            instance = new MSSQLConnect();
+        }
+        return instance;
+    }
     
-    /** Método estático para conexão entre o JDBC e o SQLServer.
+    /** Implementação da conexão entre o JDBC e o SQLServer.
      * Feche a conexão depois de usar!
      * @return Objeto de conexão 
      */
-    public static Connection conectar(){
+    public Connection getConexao(){
         Connection conexao = null;
 
         try {

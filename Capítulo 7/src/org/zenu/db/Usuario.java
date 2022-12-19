@@ -1,5 +1,6 @@
 package org.zenu.db;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 /** Classe encapsulada que representa um registro da tabela testeJDBC.dbo.usuario.
@@ -36,6 +37,21 @@ public class Usuario {
         this.valor = valor;
     }
 
+
+    /** Método para retornar todos os atributos em uma string. Útil para listar.
+     * Sobrecarrega o {@code toString} do Java.
+     * @return String contendo a descrição do usuário
+    */
+    @Override
+    public String toString(){
+        //Era disso que eu precisava pra converter a data do Calendar zzz
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+        return 
+            "Usuário[ "+id+", "+nome+", "
+            +sdf.format(data.getTime())+", "
+            +valor+" ]";
+    }
 
     //Métodos getters e setters
     public int getId() {

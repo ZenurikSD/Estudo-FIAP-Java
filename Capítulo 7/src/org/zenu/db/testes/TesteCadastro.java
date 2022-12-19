@@ -2,12 +2,12 @@ package org.zenu.db.testes;
 
 import java.util.Calendar;
 import org.zenu.db.Usuario;
-import org.zenu.db.UsuarioDAO;
+import org.zenu.db.UsuarioDAO_mssql;
 
 public class TesteCadastro {
     public static void main(String[] args) {
         //Instância do DAO
-        UsuarioDAO dao = new UsuarioDAO();
+        UsuarioDAO_mssql dao = new UsuarioDAO_mssql();
 
         //Instância de um usuário
         Usuario user = new Usuario();
