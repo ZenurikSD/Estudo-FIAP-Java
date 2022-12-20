@@ -3,7 +3,7 @@ package org.zenu.db.factory;
 import org.zenu.db.dao_interfaces.UsuarioDAO;
 
 /** Abstract Factory para criação de DAOs dos diferentes servidores
- * @see 
+ * @see MSsqlDAOFactory Implementação para o SQLServer
 */
 public abstract class DAOFactory {
 
@@ -12,7 +12,7 @@ public abstract class DAOFactory {
     //public static final int ORACLE = 2; //não implementado
 
     /** Atributo para armazenar a instância da Factory do SQL Server*/
-    public static DAOFactory mssqlDAOFactory;
+    public static DAOFactory mssql_daofac;
 
     /** Instancia uma DAOFactory específica de um servidor
      * @param servidor A constante do servidor escolhido
@@ -20,19 +20,18 @@ public abstract class DAOFactory {
     */
     public static DAOFactory getDAOFactory(int servidor){
 
-        //Troca de implementação e instancia uma Factory se não existir
         switch(servidor){
         case SQLSERVER:
-            if(mssqlDAOFactory==null){
-                mssqlDAOFactory = new MSsqlDAOFactory();
+            if(mssql_daofac==null){
+                mssql_daofac = new MSsqlDAOFactory();
             }
-            return mssqlDAOFactory;
+            return mssql_daofac;
 
         default:
             return null;
         }
     }
     
-    /** Método que retorna a instância da implementação do UsuarioDAO de acordo com o servidor */
+    /** Retorna a instância do UsuarioDAO de acordo com o servidor */
     public abstract UsuarioDAO getUserDAO();
 }

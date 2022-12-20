@@ -15,7 +15,7 @@ public class MSSQLConnect {
     //Construtor privado
     private MSSQLConnect(){}
 
-    /** Método criador da instância de conexão 
+    /** Criador da instância de conexão 
      * @return Instância única e global dessa classe
     */
     public static MSSQLConnect getInstancia(){

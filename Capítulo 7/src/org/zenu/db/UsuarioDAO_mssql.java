@@ -220,6 +220,7 @@ public class UsuarioDAO_mssql implements UsuarioDAO{
 
     /** Atualiza um registro da tabela (depende de query) 
      * É preciso dar commit manual após executar a query para que funcione.
+     * Exemplo clássico de controle transacional lol.
      * @param user O usuário (registro retornado do {@link buscarPorID}
      * que você deseja atualizar.
     */
